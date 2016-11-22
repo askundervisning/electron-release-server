@@ -2,9 +2,9 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title Awesome Electron Desktop App
-    meta(name='description', content='Download the interactive app for doing whatever it does.')
-    meta(name='author', content='Arek Sredzki')
+    title ASK Offline!
+    meta(name='description', content='Last ned ASK for offline bruk - til bruk hjemme, eller under vann.')
+    meta(name='author', content='Tarjei Huse (tarjei@asku.no)')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     base(href="/")
 
@@ -14,23 +14,23 @@ html
     // endbower
 
     // STYLES
-    link(rel="stylesheet", href="/min/production.min.css")
+    link(rel="stylesheet", href="/styles/importer.css")
     // STYLES END
   body(ng-app='app', ng-controller='MainController as main')
     .header
       .navbar.navbar-default(role='navigation')
         .container-fluid
           .navbar-header
-            a.pull-left(href='/')
-              img.navbar-logo(src='/images/logo.svg')
-            a.navbar-brand(href='/') Electron App
+            a.pull-left(href='https://elev.asku.no')
+              img.navbar-logo(src='https://elev.asku.no/v3-files/assets/img/ask_logo.svg')
+            a.navbar-brand(href='/')
           .collapse.navbar-collapse
             ul.nav.navbar-nav
               li(ng-class="{ active: isActive('/')}")
-                a(href='/') Home
+                a(href='/') Hjem
             ul.nav.navbar-nav
               li(ng-class="{ active: isActive('/releases')}")
-                a(href='/releases') Download
+                a(href='/releases') Last ned
             auth-toolbar
     .container
       div(ng-view='')
@@ -39,7 +39,7 @@ html
           i.fa.fa-fw.fa-code
           |  with
           i.fa.fa-fw.fa-heart
-          |  by Arek Sredzki
+          |  by Team ASK
 
 
     // bower:js
