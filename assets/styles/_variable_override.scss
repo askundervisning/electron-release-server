@@ -1,7 +1,19 @@
 $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
 
+$ask-color :#653E83;
+$ask-compound: #6B5080;
+$ask-color-secondary: #6c5080;
+$ask-color-ligthen: #C2B1CF;
+$ask-color-third: #8664A0;
+$ask-color-gray: #f2f2f2;
+$ask-color-green : #60C4B8;
+$ask-color-gray-lines : #E5E5E5;
+$ask-color-gray-line-secondary : #C6C6C6;
+
+
+
 // Override the default flatly brand colour
-$brand-primary: #088dd9 !default;
+$brand-primary: $ask-color !default;
 $brand-danger: $brand-primary !default;
 $navbar-default-link-hover-color: #ccc !default;
 $border-radius-base: 0 !default;

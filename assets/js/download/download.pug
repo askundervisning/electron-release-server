@@ -1,8 +1,8 @@
 .row.text-center
   .col-md-12
-    h2 Download our Electron App 
+    h2 ASK Offline
       small.pull-right
-        | Channel: 
+        | Channel:
         select(
           ng-model='vm.channel'
           ng-options='channel for channel in vm.availableChannels'
@@ -11,13 +11,13 @@
 .row.text-center.padding-top-20(ng-if="vm.latestReleases")
   .col-md-12(ng-if="vm.platform === 'osx'")
     .jumbotron
-      h4 OS X 
+      h4 OS X
         span.text-muted 64 bit
       a.btn.btn-success.btn-lg(
         ng-click="vm.download(vm.latestReleases['64'])"
         )
         i.fa.fa-download.fa-5x
-        h5 {{ vm.latestReleases['64'].version }} 
+        h5 {{ vm.latestReleases['64'].version }}
           label.label.label-info(
             ng-show="vm.latestReleases['64'].channel !== 'stable'"
             )
@@ -43,7 +43,7 @@
           ng-click="vm.download(vm.latestReleases['32'])"
           )
           i.fa.fa-download.fa-5x
-          h5 {{ vm.latestReleases['32'].version }} 
+          h5 {{ vm.latestReleases['32'].version }}
             label.label.label-info(
               ng-show="vm.latestReleases['32'].channel !== 'stable'"
               )
@@ -51,7 +51,7 @@
         .padding-top-20.text-muted
           span.timestamp(am-time-ago="vm.latestReleases['64'].createdAt")
         .padding-top-20(ng-show="vm.latestReleases['32'].notes")
-          h4 Change Notes
+          h4 Versjonsinformasjon
           p.release-notes.text-muted(
             ng-bind-html="vm.latestReleases['32'].notes"
             )
@@ -64,7 +64,7 @@
           ng-click="vm.download(vm.latestReleases['64'])"
           )
           i.fa.fa-download.fa-5x
-          h5 {{ vm.latestReleases['64'].version }} 
+          h5 {{ vm.latestReleases['64'].version }}
             label.label.label-info(
               ng-show="vm.latestReleases['64'].channel !== 'stable'"
               )
@@ -80,20 +80,20 @@
 .row.text-center.padding-top-20(ng-if="!vm.latestReleases")
   .col-md-12
     h5.text-muted
-      | There are no {{ vm.channel }} releases available for {{ vm.platform }}.
-      
+      | Det er ingen {{ vm.channel }} versjoner klare for {{ vm.platform }}.
+
 .row.text-center.padding-20-0
   .col-sm-8.col-sm-offset-2
     h5.pointer(
       ng-click="vm.showAllVersions = !vm.showAllVersions"
       )
-      span(ng-show="vm.showAllVersions") Hide
-      span(ng-hide="vm.showAllVersions") Show
-      |  all versions
+      span(ng-show="vm.showAllVersions") Skjul
+      span(ng-hide="vm.showAllVersions") Vis
+      |  alle versjoner
     div(ng-show="vm.showAllVersions")
       .jumbotron(ng-repeat='version in vm.versions')
         p.timestamp.text-muted(am-time-ago="version.createdAt")
-        h4 {{ version.name }} 
+        h4 {{ version.name }}
           label.label(
             ng-class="version.channel.name === 'stable' ? 'label-success' : 'label-info'"
             )
