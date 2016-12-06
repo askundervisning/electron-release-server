@@ -3,7 +3,10 @@
   "private": true,
   "version": "1.4.1",
   "node_deb": {
-    "version":"1.4.1-1"
+    "version":"1.4.1-2",
+    "templates": {
+        "postinst": "packaging/post-inst-template.sh"
+    }
   },
   "description": "A version server for hosting and serving the your electron desktop app releases.",
   "dependencies": {
