@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.4.1",
   "node_deb": {
-    "version":"1.4.1-3",
+    "version":"1.4.1-4",
     "templates": {
         "postinst": "packaging/post-inst-template.sh"
     }
