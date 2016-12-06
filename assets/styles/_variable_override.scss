@@ -1,6 +1,8 @@
 $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
 
 $ask-color :#653E83;
+
+$link-color: #fff;
 $ask-compound: #6B5080;
 $ask-color-secondary: #6c5080;
 $ask-color-ligthen: #C2B1CF;
@@ -19,3 +21,14 @@ $navbar-default-link-hover-color: #ccc !default;
 $border-radius-base: 0 !default;
 $border-radius-large: 0 !default;
 $border-radius-small: 0 !default;
+
+
+$btn-border-radius-base:         7px !default;
+$btn-border-radius-large:        15px !default;
+$btn-border-radius-small:        5px !default;
+
+$btn-success-bg: #6B5080;
+
+$btn-info-color:                 #000 !default;
+$btn-info-bg:                    #fff !default;
+$btn-info-border:                $btn-info-bg !default;
